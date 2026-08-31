@@ -1,0 +1,141 @@
+/* MRB Energy Solutions — Official Brand Theme */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+:root {
+  --brand-green: #5aad2b;
+  --brand-green-hover: #4d9a24;
+  --brand-green-light: rgba(90, 173, 43, 0.12);
+  --brand-blue: #084267;
+  --brand-blue-light: rgba(8, 66, 103, 0.25);
+  --bg-main: #090d14;
+  --bg-surface: #0e1420;
+  --bg-card: rgba(14, 20, 32, 0.7);
+  --border-subtle: rgba(255, 255, 255, 0.07);
+  --border-hover: rgba(90, 173, 43, 0.35);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-main);
+  color: #cbd5e1;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.font-mono {
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Logo Badge Wrapper */
+.logo-badge {
+  background: #ffffff;
+  padding: 4px 10px;
+  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease;
+}
+
+.logo-badge:hover {
+  transform: scale(1.02);
+}
+
+/* Cards */
+.clean-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: all 0.25s ease;
+}
+
+.clean-card:hover {
+  border-color: var(--border-hover);
+}
+
+/* Brand Gradient Text (Leaf Green to Electric Cyan/Blue) */
+.text-gradient {
+  background: linear-gradient(135deg, #74c741 0%, #5aad2b 50%, #29b6f6 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-green {
+  background: linear-gradient(135deg, #74c741 0%, #5aad2b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Brand Buttons */
+.btn-brand-primary {
+  background: #5aad2b;
+  color: #ffffff;
+  font-weight: 700;
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 4px 14px rgba(90, 173, 43, 0.3);
+}
+
+.btn-brand-primary:hover {
+  background: #4d9a24;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(90, 173, 43, 0.4);
+}
+
+/* Range Slider */
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #1e293b;
+  border-radius: 9999px;
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #5aad2b;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(90, 173, 43, 0.6);
+  transition: transform 0.15s ease;
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.15);
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #5aad2b;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 10px rgba(90, 173, 43, 0.6);
+}
+
+.ambient-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 900px;
+  height: 380px;
+  background: radial-gradient(ellipse at top, rgba(90, 173, 43, 0.09) 0%, rgba(8, 66, 103, 0.05) 50%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+}

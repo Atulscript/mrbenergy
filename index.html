@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home | MRB Energy Solutions</title>
+  <meta name="description" content="Turnkey Solar Power for Homes, Small Businesses & Factories" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+</head>
+<body class="bg-[#06090e] text-slate-200 antialiased flex flex-col min-h-screen">
+  <div class="ambient-glow"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-40 bg-[#06090e]/95 backdrop-blur-md border-b border-white/[0.07]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo (100% Transparent) -->
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/img/logo-transparent.png" alt="MRB Energy Solutions" class="h-8 sm:h-9 w-auto object-contain" />
+      </a>
+
+      <!-- Desktop Nav with Dropdown -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-medium">
+        
+        <!-- 1. Home -->
+        <a href="index.html" class="text-[#74c741] font-bold transition-colors">Home</a>
+
+        <!-- 2. About -->
+        <a href="about.html" class="text-slate-300 hover:text-white transition-colors">About</a>
+
+        <!-- 3. Solutions Dropdown -->
+        <div class="relative group py-4">
+          <button class="text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors focus:outline-none">
+            <span>Solutions</span>
+            <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          
+          <!-- Dropdown Menu Box -->
+          <div class="absolute top-full left-0 w-64 bg-[#0e1521] border border-white/[0.1] rounded-2xl shadow-2xl p-2.5 hidden group-hover:block transition-all duration-200 z-50">
+            <a href="solutions.html" class="flex items-start gap-3 p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.04] transition-colors">
+              <div class="w-7 h-7 rounded-lg bg-[#5aad2b]/15 text-[#74c741] flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-solar-panel"></i></div>
+              <div>
+                <div class="font-bold text-xs text-white">Solar Solutions</div>
+                <div class="text-[11px] text-slate-400">Homes, Offices & Factories</div>
+              </div>
+            </a>
+            <a href="calculator.html" class="flex items-start gap-3 p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.04] transition-colors">
+              <div class="w-7 h-7 rounded-lg bg-[#38bdf8]/15 text-[#38bdf8] flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-calculator"></i></div>
+              <div>
+                <div class="font-bold text-xs text-white">Solar Calculator</div>
+                <div class="text-[11px] text-slate-400">25-Yr ROI & Subsidy Engine</div>
+              </div>
+            </a>
+            <a href="financing.html" class="flex items-start gap-3 p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.04] transition-colors">
+              <div class="w-7 h-7 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+              <div>
+                <div class="font-bold text-xs text-white">Subsidies & Financing</div>
+                <div class="text-[11px] text-slate-400">PM Surya Ghar & 40% Tax Shield</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Case Studies -->
+        <a href="case-studies.html" class="text-slate-300 hover:text-white transition-colors">Case Studies</a>
+
+        <!-- 5. Contact -->
+        <a href="contact.html" class="text-slate-300 hover:text-white transition-colors">Contact</a>
+
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <a href="tel:+919477004493" class="hidden sm:flex items-center gap-1.5 text-xs text-slate-300 hover:text-white font-medium">
+          <i class="fa-solid fa-phone text-[#74c741] text-[11px]"></i> +91 94770 04493
+        </a>
+        <a href="contact.html" class="px-4 py-2 rounded-xl text-xs font-bold btn-brand-primary">
+          Free Survey
+        </a>
+        <button id="mobileMenuBtn" class="lg:hidden text-slate-300 hover:text-white p-2 text-base">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileNavBackdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden"></div>
+  <div id="mobileNavDrawer" class="fixed top-0 right-0 h-full w-72 bg-[#0e1521] border-l border-white/[0.08] z-50 transform translate-x-full transition-transform duration-300 p-6 flex flex-col justify-between overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-white/[0.06]">
+        <a href="index.html" class="brand-logo-link">
+          <img src="assets/img/logo-transparent.png" alt="MRB Energy Solutions" class="h-7 w-auto object-contain" />
+        </a>
+        <button id="closeMenuBtn" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+      
+      <div class="flex flex-col gap-1 py-4 text-xs font-medium">
+        <a href="index.html" class="px-3 py-2 rounded-xl text-[#74c741] font-bold bg-[#5aad2b]/10">Home</a>
+        <a href="about.html" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white">About</a>
+        
+        <!-- Mobile Solutions Submenu Group -->
+        <div class="pt-1">
+          <div class="px-3 py-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider">Solutions</div>
+          <div class="pl-3 flex flex-col gap-1 border-l-2 border-slate-800 ml-3 mt-1">
+            <a href="solutions.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white">Solar Solutions</a>
+            <a href="calculator.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white">Solar Calculator</a>
+            <a href="financing.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white">Subsidies & Financing</a>
+          </div>
+        </div>
+
+        <a href="case-studies.html" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white mt-2">Case Studies</a>
+        <a href="contact.html" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white">Contact</a>
+      </div>
+    </div>
+    
+    <div class="pt-4 border-t border-white/[0.06] space-y-2">
+      <a href="contact.html" class="block w-full py-2.5 rounded-xl text-xs font-bold btn-brand-primary text-center">Book Site Survey</a>
+      <a href="tel:+919477004493" class="block w-full py-2 rounded-xl text-xs text-slate-300 text-center border border-slate-700">+91 94770 04493</a>
+    </div>
+  </div>
+
+  <!-- 2-COLUMN ENTERPRISE HERO WITH SCADA TELEMETRY OVERLAY -->
+  <section class="relative pt-12 pb-16 lg:pt-16 lg:pb-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      
+      <div class="grid lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+        
+        <!-- Left Column: Copy & CTAs (7 Cols) -->
+        <div class="lg:col-span-7 space-y-6 text-left">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#5aad2b]/10 text-[#74c741] text-xs font-semibold border border-[#5aad2b]/25">
+            <span class="pulse-dot"></span>
+            <span>MNRE Empaneled</span>
+            <span class="text-[#5aad2b]/40">•</span>
+            <span>Turnkey Solar EPC & SCADA Telemetry</span>
+          </div>
+
+          <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight leading-[1.18]">
+            Precision Solar Power for <span class="text-gradient">Homes, Businesses & Factories</span>
+          </h1>
+
+          <p class="text-sm sm:text-base text-slate-300 font-normal leading-relaxed">
+            Eliminate power bills with IIT Kharagpur engineered solar plants. Receive up to <strong class="text-white">₹78,000 PM Surya Ghar Govt Subsidy</strong> for your home, or slash industrial factory power costs by <strong class="text-white">up to 70%</strong> with 40% Section 32 tax depreciation.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center gap-3 pt-2">
+            <a href="calculator.html" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-bold btn-brand-primary flex items-center justify-center gap-2">
+              <i class="fa-solid fa-calculator"></i> Calculate Solar ROI & Subsidy
+            </a>
+            <a href="contact.html" class="w-full sm:w-auto px-6 py-3.5 rounded-xl text-xs font-semibold btn-brand-secondary flex items-center justify-center gap-2">
+              Schedule Free Drone Survey <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+          </div>
+
+          <div class="pt-3 flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-slate-300 font-medium">
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[#74c741]"></i> ₹78k DBT Home Subsidy</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[#74c741]"></i> 40% Tax Depreciation</span>
+            <span class="flex items-center gap-1.5"><i class="fa-solid fa-check text-[#74c741]"></i> 25-Yr Performance Guarantee</span>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Real Solar Photo + Live SCADA Telemetry Box -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="hero-image-frame">
+            <img src="assets/img/hero-solar.jpg" alt="Commercial Rooftop Solar Installation" class="w-full h-72 sm:h-80 object-cover" />
+            
+            <!-- Live Telemetry Tag -->
+            <div class="absolute top-4 right-4 bg-[#06090e]/90 backdrop-blur-md border border-white/15 px-3 py-1.5 rounded-full flex items-center gap-2 shadow-lg">
+              <span class="pulse-dot"></span>
+              <span class="text-[11px] font-bold text-white font-mono">Live Grid Synch</span>
+            </div>
+          </div>
+
+          <!-- Live SCADA Telemetry Box -->
+          <div class="scada-container p-4 space-y-3">
+            <div class="flex justify-between items-center text-xs pb-2 border-b border-white/[0.08]">
+              <span class="text-slate-300 font-bold flex items-center gap-2">
+                <i class="fa-solid fa-satellite-dish text-[#74c741]"></i> SCADA Telemetry Feed
+              </span>
+              <span class="text-[10px] font-mono text-[#74c741] px-2 py-0.5 rounded bg-[#5aad2b]/15">Operational (99.8% PR)</span>
+            </div>
+
+            <div class="grid grid-cols-3 gap-2 text-center text-xs">
+              <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06]">
+                <div class="text-[10px] text-slate-400 uppercase">Live Output</div>
+                <div id="liveScadaPower" class="text-sm font-bold text-white font-mono mt-0.5">144.2 kW</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06]">
+                <div class="text-[10px] text-slate-400 uppercase">Irradiance</div>
+                <div id="liveScadaIrr" class="text-sm font-bold text-amber-400 font-mono mt-0.5">885 W/m²</div>
+              </div>
+              <div class="p-2.5 rounded-lg bg-white/[0.03] border border-white/[0.06]">
+                <div class="text-[10px] text-slate-400 uppercase">Daily Yield</div>
+                <div class="text-sm font-bold text-[#74c741] font-mono mt-0.5">846 kWh</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- STATS ROW -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 mt-12">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="clean-card p-4">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">25+ <span class="text-xs text-[#74c741] font-sans font-normal">MWp</span></div>
+          <div class="text-xs text-slate-300 font-medium mt-1">Solar Capacity Installed</div>
+        </div>
+        <div class="clean-card p-4">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">1,200+</div>
+          <div class="text-xs text-slate-300 font-medium mt-1">Homes & Factories Powered</div>
+        </div>
+        <div class="clean-card p-4">
+          <div class="text-2xl sm:text-3xl font-extrabold text-[#74c741] font-mono">₹78,000</div>
+          <div class="text-xs text-slate-300 font-medium mt-1">Max Rooftop Govt Subsidy</div>
+        </div>
+        <div class="clean-card p-4">
+          <div class="text-2xl sm:text-3xl font-extrabold text-white font-mono">3 <span class="text-xs text-slate-300 font-sans font-normal">Years</span></div>
+          <div class="text-xs text-slate-300 font-medium mt-1">Average Capital Payback</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3 DISTINCT USER SEGMENTS -->
+  <section class="py-16 bg-[#090e17] border-y border-white/[0.06]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-10">
+      
+      <div class="text-center max-w-xl mx-auto space-y-2">
+        <div class="text-xs font-bold text-[#74c741] uppercase tracking-wider">Tailored Solutions</div>
+        <h2 class="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">Solar Engineered for Every Scale</h2>
+        <p class="text-xs sm:text-sm text-slate-300">Custom EPC packages designed specifically for your building type and energy tariff.</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        
+        <!-- Segment 1: Households -->
+        <div class="clean-card p-6 space-y-4 border-[#5aad2b]/30">
+          <div class="w-10 h-10 rounded-xl bg-[#5aad2b]/10 text-[#74c741] flex items-center justify-center text-lg"><i class="fa-solid fa-house"></i></div>
+          <div>
+            <span class="text-[10px] font-mono font-bold text-[#74c741] uppercase">1 kW – 10 kW</span>
+            <h3 class="text-base font-bold text-white mt-0.5">Homes & Housing Societies</h3>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Eliminate high residential electricity bills. Complete assistance with Central Govt PM Surya Ghar portal to receive up to ₹78,000 DBT subsidy.
+          </p>
+          <ul class="space-y-1.5 text-xs text-slate-300 pt-1">
+            <li><i class="fa-solid fa-check text-[#74c741] mr-1.5"></i> Up to ₹78,000 Direct Bank Subsidy</li>
+            <li><i class="fa-solid fa-check text-[#74c741] mr-1.5"></i> Zero electricity bills with Net Metering</li>
+            <li><i class="fa-solid fa-check text-[#74c741] mr-1.5"></i> Optional hybrid battery backup</li>
+          </ul>
+          <a href="solutions.html#residential" class="inline-block text-xs font-bold text-[#74c741] pt-2 hover:underline">View Residential Solutions &rarr;</a>
+        </div>
+
+        <!-- Segment 2: Small & Medium Organizations -->
+        <div class="clean-card p-6 space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-[#084267]/40 text-[#38bdf8] flex items-center justify-center text-lg"><i class="fa-solid fa-building"></i></div>
+          <div>
+            <span class="text-[10px] font-mono font-bold text-[#38bdf8] uppercase">10 kW – 100 kW</span>
+            <h3 class="text-base font-bold text-white mt-0.5">Offices, Schools & Hospitals</h3>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Offset peak daytime air conditioning, computer labs, and medical diagnostics loads. Lower demand charges and boost ESG green credentials.
+          </p>
+          <ul class="space-y-1.5 text-xs text-slate-300 pt-1">
+            <li><i class="fa-solid fa-check text-[#38bdf8] mr-1.5"></i> 50–70% Commercial tariff reduction</li>
+            <li><i class="fa-solid fa-check text-[#38bdf8] mr-1.5"></i> Zero-capex PPA options available</li>
+            <li><i class="fa-solid fa-check text-[#38bdf8] mr-1.5"></i> Uninterrupted clean power</li>
+          </ul>
+          <a href="solutions.html#commercial" class="inline-block text-xs font-bold text-[#38bdf8] pt-2 hover:underline">View Commercial Solutions &rarr;</a>
+        </div>
+
+        <!-- Segment 3: Small to Medium Factories -->
+        <div class="clean-card p-6 space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-amber-500/10 text-amber-400 flex items-center justify-center text-lg"><i class="fa-solid fa-industry"></i></div>
+          <div>
+            <span class="text-[10px] font-mono font-bold text-amber-400 uppercase">50 kW – 500 kW+</span>
+            <h3 class="text-base font-bold text-white mt-0.5">Small & Medium Factories</h3>
+          </div>
+          <p class="text-xs text-slate-300 leading-relaxed">
+            Engineered for textile looms, cold storage compressors, plastic molding, and machining workshops with heavy power surge requirements.
+          </p>
+          <ul class="space-y-1.5 text-xs text-slate-300 pt-1">
+            <li><i class="fa-solid fa-check text-amber-400 mr-1.5"></i> 40% Accelerated Tax Depreciation (Sec 32)</li>
+            <li><i class="fa-solid fa-check text-amber-400 mr-1.5"></i> DG synchronization to cut diesel cost</li>
+            <li><i class="fa-solid fa-check text-amber-400 mr-1.5"></i> 3-Year Capex payback</li>
+          </ul>
+          <a href="solutions.html#industrial" class="inline-block text-xs font-bold text-amber-400 pt-2 hover:underline">View Factory Solutions &rarr;</a>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MINIMAL FOOTER WITH TRANSPARENT LOGO -->
+  <footer class="mt-auto border-t border-white/[0.07] py-12 text-xs text-slate-400 bg-[#04060a]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-3 md:col-span-1">
+          <a href="index.html" class="brand-logo-link">
+            <img src="assets/img/logo-transparent.png" alt="MRB Energy Solutions" class="h-8 w-auto object-contain" />
+          </a>
+          <p class="text-[12px] text-slate-300 leading-relaxed pt-2">
+            Turnkey solar EPC for Homes, Small-to-Medium Organizations, and Factories across Eastern India. MNRE Empaneled & PM Surya Ghar registered vendor.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <div class="font-bold text-white text-xs">Solutions & Tools</div>
+          <ul class="space-y-1.5 text-xs text-slate-300">
+            <li><a href="solutions.html#residential" class="hover:text-[#74c741] transition-colors">Residential Solar (1–10 kW)</a></li>
+            <li><a href="solutions.html#commercial" class="hover:text-[#74c741] transition-colors">Commercial & Institutional</a></li>
+            <li><a href="solutions.html#industrial" class="hover:text-[#74c741] transition-colors">Small & Medium Factories</a></li>
+            <li><a href="calculator.html" class="hover:text-[#74c741] transition-colors">Solar ROI Calculator</a></li>
+            <li><a href="financing.html" class="hover:text-[#74c741] transition-colors">Subsidies & Financing</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <div class="font-bold text-white text-xs">Company</div>
+          <ul class="space-y-1.5 text-xs text-slate-300">
+            <li><a href="about.html" class="hover:text-[#74c741] transition-colors">About MRB Energy</a></li>
+            <li><a href="case-studies.html" class="hover:text-[#74c741] transition-colors">Verified Case Studies</a></li>
+            <li><a href="financing.html#pm-surya-ghar" class="hover:text-[#74c741] transition-colors">PM Surya Ghar (₹78k Subsidy)</a></li>
+            <li><a href="contact.html" class="hover:text-[#74c741] transition-colors">Book Free Site Survey</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <div class="font-bold text-white text-xs">Headquarters</div>
+          <div class="text-xs text-slate-300 space-y-1.5">
+            <p><i class="fa-solid fa-location-dot text-[#74c741] mr-1.5"></i> Kolkata, West Bengal, India</p>
+            <p><i class="fa-solid fa-phone text-[#74c741] mr-1.5"></i> <a href="tel:+919477004493" class="hover:text-[#74c741] transition-colors font-mono">+91 94770 04493</a></p>
+            <p><i class="fa-regular fa-envelope text-[#74c741] mr-1.5"></i> <a href="mailto:contact@mrbenergy.in" class="hover:text-[#74c741] transition-colors">contact@mrbenergy.in</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/[0.06] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div>&copy; 2026 MRB Energy Solutions. Empaneled with WBSEDCL, CESC & State DISCOMs.</div>
+        <div class="flex gap-4">
+          <a href="contact.html" class="hover:text-slate-300">Privacy Policy</a>
+          <a href="contact.html" class="hover:text-slate-300">Terms of Engagement</a>
+          <a href="contact.html#faqs" class="hover:text-slate-300">Net Metering FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/calculator.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

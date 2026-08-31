@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Free Survey | MRB Energy Solutions</title>
+  <meta name="description" content="Book a free on-site solar survey for your home, office, or factory" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  
+</head>
+<body class="bg-[#06090e] text-slate-200 antialiased flex flex-col min-h-screen">
+  <div class="ambient-glow"></div>
+
+  <!-- STICKY NAVBAR -->
+  <header class="sticky top-0 z-40 bg-[#06090e]/95 backdrop-blur-md border-b border-white/[0.07]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+      
+      <!-- Brand Logo (100% Transparent) -->
+      <a href="index.html" class="brand-logo-link">
+        <img src="assets/img/logo-transparent.png" alt="MRB Energy Solutions" class="h-8 sm:h-9 w-auto object-contain" />
+      </a>
+
+      <!-- Desktop Nav with Dropdown -->
+      <nav class="hidden lg:flex items-center gap-7 text-xs font-medium">
+        
+        <!-- 1. Home -->
+        <a href="index.html" class="text-slate-300 hover:text-white transition-colors">Home</a>
+
+        <!-- 2. About -->
+        <a href="about.html" class="text-slate-300 hover:text-white transition-colors">About</a>
+
+        <!-- 3. Solutions Dropdown -->
+        <div class="relative group py-4">
+          <button class="text-slate-300 hover:text-white flex items-center gap-1.5 transition-colors focus:outline-none">
+            <span>Solutions</span>
+            <i class="fa-solid fa-chevron-down text-[9px] transition-transform duration-200 group-hover:rotate-180"></i>
+          </button>
+          
+          <!-- Dropdown Menu Box -->
+          <div class="absolute top-full left-0 w-64 bg-[#0e1521] border border-white/[0.1] rounded-2xl shadow-2xl p-2.5 hidden group-hover:block transition-all duration-200 z-50">
+            <a href="solutions.html" class="flex items-start gap-3 p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.04] transition-colors">
+              <div class="w-7 h-7 rounded-lg bg-[#5aad2b]/15 text-[#74c741] flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-solar-panel"></i></div>
+              <div>
+                <div class="font-bold text-xs text-white">Solar Solutions</div>
+                <div class="text-[11px] text-slate-400">Homes, Offices & Factories</div>
+              </div>
+            </a>
+            <a href="calculator.html" class="flex items-start gap-3 p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.04] transition-colors">
+              <div class="w-7 h-7 rounded-lg bg-[#38bdf8]/15 text-[#38bdf8] flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-calculator"></i></div>
+              <div>
+                <div class="font-bold text-xs text-white">Solar Calculator</div>
+                <div class="text-[11px] text-slate-400">25-Yr ROI & Subsidy Engine</div>
+              </div>
+            </a>
+            <a href="financing.html" class="flex items-start gap-3 p-2.5 rounded-xl text-slate-300 hover:text-white hover:bg-white/[0.04] transition-colors">
+              <div class="w-7 h-7 rounded-lg bg-amber-500/15 text-amber-400 flex items-center justify-center text-xs mt-0.5"><i class="fa-solid fa-hand-holding-dollar"></i></div>
+              <div>
+                <div class="font-bold text-xs text-white">Subsidies & Financing</div>
+                <div class="text-[11px] text-slate-400">PM Surya Ghar & 40% Tax Shield</div>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 4. Case Studies -->
+        <a href="case-studies.html" class="text-slate-300 hover:text-white transition-colors">Case Studies</a>
+
+        <!-- 5. Contact -->
+        <a href="contact.html" class="text-[#74c741] font-bold transition-colors">Contact</a>
+
+      </nav>
+
+      <!-- Right Header Actions -->
+      <div class="flex items-center gap-3">
+        <a href="tel:+919477004493" class="hidden sm:flex items-center gap-1.5 text-xs text-slate-300 hover:text-white font-medium">
+          <i class="fa-solid fa-phone text-[#74c741] text-[11px]"></i> +91 94770 04493
+        </a>
+        <a href="contact.html" class="px-4 py-2 rounded-xl text-xs font-bold btn-brand-primary">
+          Free Survey
+        </a>
+        <button id="mobileMenuBtn" class="lg:hidden text-slate-300 hover:text-white p-2 text-base">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div id="mobileNavBackdrop" class="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 hidden"></div>
+  <div id="mobileNavDrawer" class="fixed top-0 right-0 h-full w-72 bg-[#0e1521] border-l border-white/[0.08] z-50 transform translate-x-full transition-transform duration-300 p-6 flex flex-col justify-between overflow-y-auto">
+    <div>
+      <div class="flex items-center justify-between pb-4 border-b border-white/[0.06]">
+        <a href="index.html" class="brand-logo-link">
+          <img src="assets/img/logo-transparent.png" alt="MRB Energy Solutions" class="h-7 w-auto object-contain" />
+        </a>
+        <button id="closeMenuBtn" class="text-slate-400 hover:text-white"><i class="fa-solid fa-xmark text-lg"></i></button>
+      </div>
+      
+      <div class="flex flex-col gap-1 py-4 text-xs font-medium">
+        <a href="index.html" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white">Home</a>
+        <a href="about.html" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white">About</a>
+        
+        <!-- Mobile Solutions Submenu Group -->
+        <div class="pt-1">
+          <div class="px-3 py-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider">Solutions</div>
+          <div class="pl-3 flex flex-col gap-1 border-l-2 border-slate-800 ml-3 mt-1">
+            <a href="solutions.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white">Solar Solutions</a>
+            <a href="calculator.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white">Solar Calculator</a>
+            <a href="financing.html" class="px-3 py-1.5 rounded-lg text-slate-300 hover:text-white">Subsidies & Financing</a>
+          </div>
+        </div>
+
+        <a href="case-studies.html" class="px-3 py-2 rounded-xl text-slate-300 hover:text-white mt-2">Case Studies</a>
+        <a href="contact.html" class="px-3 py-2 rounded-xl text-[#74c741] font-bold bg-[#5aad2b]/10">Contact</a>
+      </div>
+    </div>
+    
+    <div class="pt-4 border-t border-white/[0.06] space-y-2">
+      <a href="contact.html" class="block w-full py-2.5 rounded-xl text-xs font-bold btn-brand-primary text-center">Book Site Survey</a>
+      <a href="tel:+919477004493" class="block w-full py-2 rounded-xl text-xs text-slate-300 text-center border border-slate-700">+91 94770 04493</a>
+    </div>
+  </div>
+
+  <section class="py-16 lg:py-20">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 space-y-12">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#5aad2b]/10 text-[#74c741] text-xs font-medium border border-[#5aad2b]/20">
+          Book Free Consultation
+        </div>
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
+          Request a Free On-Site Solar Survey
+        </h1>
+        <p class="text-sm sm:text-base text-slate-400">
+          Our solar engineering team will inspect your rooftop, perform shadow analysis, and prepare an exact proposal with subsidy & ROI estimates.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-12 gap-8 items-start">
+        
+        <!-- Contact Form (7 Cols) -->
+        <div class="lg:col-span-7 clean-card p-6 sm:p-8 bg-[#0c121d]">
+          <h3 class="text-base font-bold text-white mb-1">Book Free Survey & Quote</h3>
+          <p class="text-xs text-slate-400 mb-6">Fill in your details below. We respond within 2 business hours.</p>
+
+          <form id="smeQuoteForm" class="space-y-4">
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Property Type *</label>
+                <select class="w-full p-2.5 rounded-lg bg-slate-950 border border-slate-700 text-xs text-white focus:outline-none focus:border-[#5aad2b]">
+                  <option value="res">Home / Residential Villa</option>
+                  <option value="apt">Housing Society (Apartment)</option>
+                  <option value="com">Commercial Office / School / Hospital</option>
+                  <option value="fac">Factory / Industrial Shed</option>
+                </select>
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Monthly Power Bill *</label>
+                <input type="text" id="formBill" required placeholder="e.g. ₹4,500 or ₹2.5 Lakh" class="w-full p-2.5 rounded-lg bg-slate-950 border border-slate-700 text-xs text-white focus:outline-none focus:border-[#5aad2b]" />
+              </div>
+            </div>
+
+            <div class="grid sm:grid-cols-2 gap-3">
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Contact Name *</label>
+                <input type="text" id="formName" required placeholder="Your Name" class="w-full p-2.5 rounded-lg bg-slate-950 border border-slate-700 text-xs text-white focus:outline-none focus:border-[#5aad2b]" />
+              </div>
+              <div>
+                <label class="block text-xs font-medium text-slate-300 mb-1">Mobile Phone *</label>
+                <input type="tel" id="formPhone" required placeholder="+91 98765 43210" class="w-full p-2.5 rounded-lg bg-slate-950 border border-slate-700 text-xs text-white focus:outline-none focus:border-[#5aad2b]" />
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-xs font-medium text-slate-300 mb-1">Location / Address (City/District) *</label>
+              <input type="text" id="formState" required placeholder="e.g. Salt Lake, Kolkata / Howrah / Durgapur" class="w-full p-2.5 rounded-lg bg-slate-950 border border-slate-700 text-xs text-white focus:outline-none focus:border-[#5aad2b]" />
+            </div>
+
+            <button type="submit" class="w-full py-3 rounded-lg font-bold text-xs btn-brand-primary mt-2">
+              Submit & Request Free Site Survey
+            </button>
+          </form>
+
+          <div id="formSuccessState" class="hidden text-center py-6 space-y-3">
+            <div class="w-10 h-10 rounded-full bg-[#5aad2b]/20 text-[#74c741] flex items-center justify-center mx-auto text-lg"><i class="fa-solid fa-check"></i></div>
+            <h4 class="text-sm font-bold text-white">Survey Request Received!</h4>
+            <p class="text-xs text-slate-400">Our solar engineer will contact you shortly to schedule the visit.</p>
+            <div class="pt-2">
+              <a id="sendWaConfirmation" href="#" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-xs font-bold btn-brand-primary">
+                <i class="fa-brands fa-whatsapp"></i> Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Info (5 Cols) -->
+        <div class="lg:col-span-5 space-y-4">
+          <div class="clean-card p-6 space-y-4">
+            <h3 class="text-sm font-bold text-white">Office & Direct Contact</h3>
+            <div class="space-y-3 text-xs text-slate-300">
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-location-dot text-[#74c741] mt-1 text-sm"></i>
+                <div>
+                  <div class="font-semibold text-white">Headquarters</div>
+                  <div class="text-slate-400 text-[11px]">MRB Energy Solutions, Kolkata, West Bengal, India</div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-solid fa-phone text-[#74c741] mt-1 text-sm"></i>
+                <div>
+                  <div class="font-semibold text-white">Direct Phone</div>
+                  <div class="text-slate-400 text-[11px]"><a href="tel:+919477004493" class="hover:text-[#74c741]">+91 94770 04493</a></div>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <i class="fa-regular fa-envelope text-[#74c741] mt-1 text-sm"></i>
+                <div>
+                  <div class="font-semibold text-white">Email Address</div>
+                  <div class="text-slate-400 text-[11px]"><a href="mailto:contact@mrbenergy.in" class="hover:text-[#74c741]">contact@mrbenergy.in</a></div>
+                </div>
+              </div>
+            </div>
+            <div class="pt-2 border-t border-white/[0.06]">
+              <a href="https://wa.me/919477004493?text=Hi%20MRB%20Energy,%20we%20want%20to%20schedule%20a%20solar%20feasibility%20survey." target="_blank" class="block w-full py-2.5 rounded-lg text-xs font-semibold bg-slate-900 border border-slate-700 text-slate-200 hover:bg-slate-800 text-center transition-colors">
+                <i class="fa-brands fa-whatsapp text-[#74c741] mr-1.5"></i> Chat with Solar Engineer on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- FAQ Accordion -->
+      <div id="faqs" class="clean-card p-6 sm:p-8 space-y-6">
+        <h3 class="text-lg font-bold text-white text-center">Frequently Asked Questions</h3>
+        <div class="space-y-3 max-w-3xl mx-auto">
+          <div class="faq-accordion-item clean-card overflow-hidden bg-slate-950/60">
+            <button class="faq-header w-full p-4 text-left flex justify-between items-center text-xs sm:text-sm font-semibold text-white">
+              <span>How do I get the ₹78,000 PM Surya Ghar subsidy for my home?</span>
+              <i class="faq-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-content hidden px-4 pb-4 text-xs text-slate-400 leading-relaxed border-t border-white/[0.06] pt-3">
+              MRB Energy is a registered empaneled vendor. We submit the application on the PM Surya Ghar National Portal, complete the installation with MNRE-approved components, inspect with DISCOM, and the subsidy is credited directly to your bank account via DBT.
+            </div>
+          </div>
+          <div class="faq-accordion-item clean-card overflow-hidden bg-slate-950/60">
+            <button class="faq-header w-full p-4 text-left flex justify-between items-center text-xs sm:text-sm font-semibold text-white">
+              <span>How does Net Metering work with WBSEDCL / CESC in West Bengal?</span>
+              <i class="faq-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-content hidden px-4 pb-4 text-xs text-slate-400 leading-relaxed border-t border-white/[0.06] pt-3">
+              A bidirectional net meter records both imported grid electricity and exported solar surplus. At the end of each billing cycle, you only pay for the net difference. If you generate surplus, it credits to your next bill.
+            </div>
+          </div>
+          <div class="faq-accordion-item clean-card overflow-hidden bg-slate-950/60">
+            <button class="faq-header w-full p-4 text-left flex justify-between items-center text-xs sm:text-sm font-semibold text-white">
+              <span>How does 40% Accelerated Tax Depreciation benefit factories and businesses?</span>
+              <i class="faq-icon fa-solid fa-chevron-down text-xs text-slate-400 transition-transform"></i>
+            </button>
+            <div class="faq-content hidden px-4 pb-4 text-xs text-slate-400 leading-relaxed border-t border-white/[0.06] pt-3">
+              Commercial solar systems qualify for a 40% depreciation rate in Year 1 under Section 32 of the Income Tax Act. For profitable companies paying 25.17% corporate tax, this directly reduces income tax liability by ~10–15% of project cost.
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- MINIMAL FOOTER WITH TRANSPARENT LOGO -->
+  <footer class="mt-auto border-t border-white/[0.07] py-12 text-xs text-slate-400 bg-[#04060a]">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 space-y-8">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="space-y-3 md:col-span-1">
+          <a href="index.html" class="brand-logo-link">
+            <img src="assets/img/logo-transparent.png" alt="MRB Energy Solutions" class="h-8 w-auto object-contain" />
+          </a>
+          <p class="text-[12px] text-slate-300 leading-relaxed pt-2">
+            Turnkey solar EPC for Homes, Small-to-Medium Organizations, and Factories across Eastern India. MNRE Empaneled & PM Surya Ghar registered vendor.
+          </p>
+        </div>
+
+        <div class="space-y-2">
+          <div class="font-bold text-white text-xs">Solutions & Tools</div>
+          <ul class="space-y-1.5 text-xs text-slate-300">
+            <li><a href="solutions.html#residential" class="hover:text-[#74c741] transition-colors">Residential Solar (1–10 kW)</a></li>
+            <li><a href="solutions.html#commercial" class="hover:text-[#74c741] transition-colors">Commercial & Institutional</a></li>
+            <li><a href="solutions.html#industrial" class="hover:text-[#74c741] transition-colors">Small & Medium Factories</a></li>
+            <li><a href="calculator.html" class="hover:text-[#74c741] transition-colors">Solar ROI Calculator</a></li>
+            <li><a href="financing.html" class="hover:text-[#74c741] transition-colors">Subsidies & Financing</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <div class="font-bold text-white text-xs">Company</div>
+          <ul class="space-y-1.5 text-xs text-slate-300">
+            <li><a href="about.html" class="hover:text-[#74c741] transition-colors">About MRB Energy</a></li>
+            <li><a href="case-studies.html" class="hover:text-[#74c741] transition-colors">Verified Case Studies</a></li>
+            <li><a href="financing.html#pm-surya-ghar" class="hover:text-[#74c741] transition-colors">PM Surya Ghar (₹78k Subsidy)</a></li>
+            <li><a href="contact.html" class="hover:text-[#74c741] transition-colors">Book Free Site Survey</a></li>
+          </ul>
+        </div>
+
+        <div class="space-y-2">
+          <div class="font-bold text-white text-xs">Headquarters</div>
+          <div class="text-xs text-slate-300 space-y-1.5">
+            <p><i class="fa-solid fa-location-dot text-[#74c741] mr-1.5"></i> Kolkata, West Bengal, India</p>
+            <p><i class="fa-solid fa-phone text-[#74c741] mr-1.5"></i> <a href="tel:+919477004493" class="hover:text-[#74c741] transition-colors font-mono">+91 94770 04493</a></p>
+            <p><i class="fa-regular fa-envelope text-[#74c741] mr-1.5"></i> <a href="mailto:contact@mrbenergy.in" class="hover:text-[#74c741] transition-colors">contact@mrbenergy.in</a></p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/[0.06] pt-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div>&copy; 2026 MRB Energy Solutions. Empaneled with WBSEDCL, CESC & State DISCOMs.</div>
+        <div class="flex gap-4">
+          <a href="contact.html" class="hover:text-slate-300">Privacy Policy</a>
+          <a href="contact.html" class="hover:text-slate-300">Terms of Engagement</a>
+          <a href="contact.html#faqs" class="hover:text-slate-300">Net Metering FAQ</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/calculator.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
