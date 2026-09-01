@@ -1,36 +1,32 @@
-# MRB Energy Solutions — Next-Gen SME Solar Platform
+# MRB Energy Solutions — Enterprise Solar EPC Platform
 
-An ultra-modern, high-converting solar engineering website and interactive ROI calculation engine specifically designed for **Small and Medium Enterprises (SMEs) and Commercial & Industrial (C&I)** facilities across India.
-
----
-
-## ⚡ Key Highlights
-1. **SME & C&I Focused Copy**:
-   - Levelized Cost of Electricity (LCOE < ₹2.80/unit) vs Grid Tariffs (₹8–₹12/unit).
-   - 40% Accelerated Tax Depreciation (Section 32 of Indian IT Act).
-   - 3 to 3.5 Year Capital Payback.
-2. **Interactive Live SME Solar ROI Calculator**:
-   - Real-time mathematical sizing model for 6 core Indian industries (Textile, Cold Storage, Plastics & Machining, Warehousing, Pharma, Commercial).
-   - Dynamic outputs: Recommended kWp, monthly & annual savings, payback period, 25-yr cumulative value, Year 1 tax shield, and instant WhatsApp quote generator.
-3. **Dedicated Industry Blueprints**:
-   - Textile & Looms, Cold Storage (Hybrid + DG synch), Precision Plastics (Power Factor >0.98), PEB Warehouses (Zero-penetration clamps), Pharma (Cleanroom compliance).
-4. **Commercial Financing Comparison**:
-   - CAPEX Ownership, OPEX / RESCO (Zero upfront PPA), and Collateral-Free Green SME Loans (SIDBI/IREDA).
-5. **Turnkey 4-Step Engineering Lifecycle**:
-   - Drone & 3D Shadow Audit ➔ Structural SLD ➔ DISCOM & CEIG Net-Metering Approvals ➔ 24/7 IoT SCADA Telemetry.
-6. **Real Official Details & Contact**:
-   - Phone: +91-9477004493
-   - Email: contact@mrbenergy.in
-   - Location: Kolkata, West Bengal, India
+Turnkey solar EPC platform for **Residential Homes (1–10 kW)**, **Small-to-Medium Organizations (10–100 kW)**, and **Small-to-Medium Factories (50–500 kW+)** across India.
 
 ---
 
-## 🚀 How to Run Locally
+## 🌟 Highlights
+- **Pan-India Reach**: Serving residential and commercial clients nationwide.
+- **PM Surya Ghar: Muft Bijli Yojana**: Up to ₹78,000 Direct Bank Transfer (DBT) subsidy for home rooftops.
+- **40% Section 32 Tax Shield**: Accelerated tax depreciation in Year 1 for commercial & factory solar investments.
+- **Interactive SCADA Telemetry**: Live simulated solar power curve and generation monitor.
+- **Dual Mathematical Sizing & ROI Engine**: Chart.js 25-year financial wealth visualizer and 1-click WhatsApp proposal builder.
+- **Clean Dark Glassmorphic Theme**: Calibrated with official logo colors (Leaf Green #5aad2b & Deep Navy Blue #084267).
 
-You can preview the website immediately with any local HTTP server:
+---
 
-`ash
-cd C:\Users\lenovo\.gemini\antigravity\scratch\mrb-energy-sme
+## 📄 Site Map
+1. index.html — Home (Hero with live SCADA telemetry, segment cards, proof metrics)
+2. bout.html — About Us (15+ years solar EPC leadership, MNRE empaneled credentials)
+3. solutions.html — Solar Solutions (Homes, Commercial Offices, and Industrial Factories)
+4. calculator.html — Solar ROI & Subsidy Calculator (Dual-mode Chart.js visualizer)
+5. inancing.html — Subsidies & Financing (PM Surya Ghar slabs, 40% tax shield, zero-capex PPA)
+6. case-studies.html — Client Case Studies (Filterable case track record)
+7. contact.html — Contact & Free Survey (Survey request form, direct line: +91 94770 04493)
+
+---
+
+## 🚀 Local Development
+`powershell
 python -m http.server 3000
 `
-Then open http://localhost:3000 in your web browser.
+Open **http://localhost:3000** in your browser.
